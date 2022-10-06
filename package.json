@@ -1,11 +1,11 @@
 {
-  "name": "parcel-starter-2022",
+  "name": "natours",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://skochdev.github.io/parcel-starter-2022",
+  "homepage": "https://skochdev.github.io/natours",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-starter-2022/"
+    "build": "parcel build src/*.html --public-url /natours/"
   },
   "keywords": [],
   "author": "",
