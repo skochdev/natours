@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(
+      to top right,
+      rgba(111, 213, 189, 0.7),
+      rgba(85, 150, 197, 0.7)
+    ),
+    url('../images/hero.jpg');
+  background-size: cover;
+  background-position: top;
+  /*clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);*/
+
+  &__logo-wrapper {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+}

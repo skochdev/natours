@@ -1,0 +1,34 @@
+.btn {
+  transition: transform 150ms cubic-bezier($cubic-fast),
+    box-shadow 50ms cubic-bezier($cubic-fast);
+  box-shadow: $shadow-common;
+
+  &--animated:link,
+  &--animated:visited {
+    text-transform: uppercase;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.6rem;
+    animation: moveUp 0.5s ease-in 0.3s;
+    animation-fill-mode: backwards;
+  }
+
+  &--hero {
+    text-align: center;
+    background-color: $white;
+    padding: 1.5rem 3rem;
+    border-radius: 100vw;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  &:hover {
+    transform: translateY($slight-shift);
+  }
+
+  &:active {
+    transform: translateY($slight-shift);
+    box-shadow: $shadow-common--alt;
+  }
+}
