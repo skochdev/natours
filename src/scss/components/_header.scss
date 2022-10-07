@@ -39,7 +39,7 @@
       font-size: 6rem;
       letter-spacing: 3.5rem;
 
-      animation-name: moveInLeft;
+      animation-name: letterSpacingIn;
       animation-duration: 1250ms;
       animation-timing-function: $default-cubic;
     }
@@ -50,7 +50,7 @@
       font-weight: 700;
       letter-spacing: 1.7rem;
 
-      animation-name: moveInRight;
+      animation-name: letterSpacingIn--subtle;
       animation-duration: 1250ms;
       animation-timing-function: $default-cubic;
     }

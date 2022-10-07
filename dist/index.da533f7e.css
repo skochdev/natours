@@ -132,37 +132,33 @@ body {
   line-height: 1.7;
 }
 
-@keyframes moveInLeft {
+@keyframes letterSpacingIn {
   0% {
     opacity: 0;
-    transform: translateX(-.4rem);
+    letter-spacing: 6rem;
   }
 
   50% {
     opacity: .2;
-    transform: translateX(-.4rem);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
   }
 }
 
-@keyframes moveInRight {
+@keyframes letterSpacingIn--subtle {
   0% {
     opacity: 0;
-    transform: translateX(.4rem);
+    letter-spacing: 2.5rem;
   }
 
   50% {
     opacity: .2;
-    transform: translateX(-.4rem);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
   }
 }
 
@@ -212,7 +208,7 @@ body {
 
 .header .heading-primary--main {
   letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
+  animation-name: letterSpacingIn;
   animation-duration: 1.25s;
   animation-timing-function: .8, .8, .9, .9;
   font-size: 6rem;
@@ -221,7 +217,7 @@ body {
 
 .header .heading-primary--sub {
   letter-spacing: 1.7rem;
-  animation-name: moveInRight;
+  animation-name: letterSpacingIn--subtle;
   animation-duration: 1.25s;
   animation-timing-function: .8, .8, .9, .9;
   font-size: 2rem;
