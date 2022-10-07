@@ -10,133 +10,87 @@
   background-size: cover;
   background-position: top;
   /*clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);*/
-}
 
-.header__logo-wrapper {
-  position: absolute;
-  left: 3rem;
-  top: 3rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__heading-wrapper {
-  position: absolute;
-  text-align: center;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.header__heading-primary {
-  margin-bottom: 3rem;
-  color: $white;
-  text-transform: uppercase;
-
-  /*IF ANIMATION IS TWITCHY, UNCOMMENT THIS*/
-  /*backface-visibility: hidden;*/
-}
-
-.header__heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-
-  animation-name: moveInLeft;
-  animation-duration: 1250ms;
-  animation-timing-function: $default-cubic;
-}
-
-.header__heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.7rem;
-
-  animation-name: moveInRight;
-  animation-duration: 1250ms;
-  animation-timing-function: $default-cubic;
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(0.5rem);
+  &__logo-wrapper {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
   }
 
-  50% {
-    opacity: 0.2;
-    transform: translateX(-0.5rem);
+  &__logo {
+    height: 3.5rem;
   }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-0.5rem);
+  &__heading-wrapper {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  50% {
-    opacity: 0.2;
-    transform: translateX(0.5rem);
+  .heading-primary {
+    margin-bottom: 3rem;
+    color: $white;
+    text-transform: uppercase;
+
+    &--main {
+      display: block;
+      font-size: 6rem;
+      letter-spacing: 3.5rem;
+
+      animation-name: moveInLeft;
+      animation-duration: 1250ms;
+      animation-timing-function: $default-cubic;
+    }
+
+    &--sub {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.7rem;
+
+      animation-name: moveInRight;
+      animation-duration: 1250ms;
+      animation-timing-function: $default-cubic;
+    }
+
+    /*IF ANIMATION IS TWITCHY, UNCOMMENT THIS*/
+    /*backface-visibility: hidden;*/
   }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  .btn {
+    transition: transform 150ms cubic-bezier($cubic-fast),
+      box-shadow 50ms cubic-bezier($cubic-fast);
+    box-shadow: $shadow-common;
+
+    &--animated:link,
+    &--animated:visited {
+      text-transform: uppercase;
+      color: inherit;
+      text-decoration: none;
+      position: relative;
+      font-size: 1.6rem;
+      animation: moveUp 0.5s ease-in 0.3s;
+      animation-fill-mode: backwards;
+    }
+
+    &--hero {
+      text-align: center;
+      background-color: $white;
+      padding: 1.5rem 3rem;
+      border-radius: 100vw;
+      margin: 0 auto;
+      display: inline-block;
+    }
+
+    &:hover {
+      transform: translateY($slight-shift);
+    }
+
+    &:active {
+      transform: translateY($slight-shift);
+      box-shadow: $shadow-common--alt;
+    }
   }
-}
-
-.btn {
-  transition: transform 150ms cubic-bezier($cubic-fast),
-    box-shadow 50ms cubic-bezier($cubic-fast);
-  box-shadow: $shadow-common;
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  color: inherit;
-  text-decoration: none;
-  position: relative;
-  font-size: 1.6rem;
-  animation: moveUp 0.5s ease-in 0.3s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(0.1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero__btn {
-  text-align: center;
-  background-color: $white;
-  padding: 1.5rem 3rem;
-  border-radius: 100vw;
-  margin: 0 auto;
-  display: inline-block;
-}
-
-.btn:hover {
-  transform: translateY($btn-up-shift);
-}
-
-.btn:active {
-  transform: translateY($btn-press);
-  box-shadow: $shadow-common--alt;
 }

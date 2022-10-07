@@ -1,0 +1,50 @@
+// Heading text animation ->
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX($slight-shift);
+  }
+
+  50% {
+    opacity: 0.2;
+    transform: translateX($slight-shift);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-$slight-shift);
+  }
+
+  50% {
+    opacity: 0.2;
+    transform: translateX($slight-shift);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Heading text animation <-
+
+// Header button animation ->
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-$slight-shift);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//// Header button animation <-

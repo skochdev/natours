@@ -132,6 +132,52 @@ body {
   line-height: 1.7;
 }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-.4rem);
+  }
+
+  50% {
+    opacity: .2;
+    transform: translateX(-.4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(.4rem);
+  }
+
+  50% {
+    opacity: .2;
+    transform: translateX(-.4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(.4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to top right, #6fd5bdb3, #5596c5b3), url("hero.22dc911d.jpg");
@@ -158,13 +204,13 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.header__heading-primary {
+.header .heading-primary {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 3rem;
 }
 
-.header__heading-primary--main {
+.header .heading-primary--main {
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
   animation-duration: 1.25s;
@@ -173,7 +219,7 @@ body {
   display: block;
 }
 
-.header__heading-primary--sub {
+.header .heading-primary--sub {
   letter-spacing: 1.7rem;
   animation-name: moveInRight;
   animation-duration: 1.25s;
@@ -183,46 +229,12 @@ body {
   display: block;
 }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(.5rem);
-  }
-
-  50% {
-    opacity: .2;
-    transform: translateX(-.5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-.5rem);
-  }
-
-  50% {
-    opacity: .2;
-    transform: translateX(.5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.btn {
+.header .btn {
   transition: transform .15s cubic-bezier(.2, .2, .1, .2), box-shadow 50ms cubic-bezier(.2, .2, .1, .2);
   box-shadow: 0 .5rem .2rem #0003;
 }
 
-.btn:link, .btn:visited {
+.header .btn--animated:link, .header .btn--animated:visited {
   text-transform: uppercase;
   color: inherit;
   font-size: 1.6rem;
@@ -231,19 +243,7 @@ body {
   position: relative;
 }
 
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(.1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero__btn {
+.header .btn--hero {
   text-align: center;
   background-color: #fff;
   border-radius: 100vw;
@@ -252,12 +252,12 @@ body {
   display: inline-block;
 }
 
-.btn:hover {
-  transform: translateY(-.1rem);
+.header .btn:hover {
+  transform: translateY(-.4rem);
 }
 
-.btn:active {
-  transform: translateY(.1rem);
+.header .btn:active {
+  transform: translateY(-.4rem);
   box-shadow: 0 .1rem .2rem #00000080;
 }
 
