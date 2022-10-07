@@ -1,14 +1,21 @@
-* {
+*,
+*::after,
+*::before {
   border: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  /*10px default font-size. % is used so the user would be able to zoom-in/out*/
+  font-size: 62.5%;
 }
 
 body {
-  padding: 1.5rem;
+  padding: 3rem;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: #777;
+  box-sizing: border-box;
 }
