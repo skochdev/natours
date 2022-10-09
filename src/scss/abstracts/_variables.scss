@@ -1,10 +1,10 @@
-/*COLORS-----------------------*/
+// COLORS-----------------------
 
 $blue-primary: #6fd2d5;
 $blue-secondary: #5593c5;
 $white: #ffffff;
 
-/*Shadows-----------------------*/
+//Shadows-----------------------
 
 $shadow-common: 0 0.5rem 0.2rem rgb(0 0 0 / 0.2);
 $shadow-common--alt: 0 0.1rem 0.2rem rgb(0 0 0 / 0.5);
@@ -14,3 +14,8 @@ $shadow-common--alt: 0 0.1rem 0.2rem rgb(0 0 0 / 0.5);
 $default-cubic: 0.8, 0.8, 0.9, 0.9;
 $cubic-fast: 0.2, 0.2, 0.1, 0.2;
 $slight-shift: -0.4rem;
+
+// Layout ----------------------------
+$max-width: 114rem;
+$gapY: 8rem;
+$gapX: 6rem;

@@ -1,0 +1,44 @@
+.row {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gapY;
+  }
+
+  @include clearFix();
+
+  [class^='col'] {
+    background-color: $blue-primary;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gapX;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gapX}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - #{$gapX} * 2) / 3);
+  }
+
+  .col-2-of-3 {
+    // two times the width of the col-1-of-3 + gap
+    width: calc(((100% - #{$gapX} * 2) / 3) * 2 + #{$gapX});
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - #{$gapX} * 3) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(((100% - #{$gapX} * 3) / 4) * 2 + #{$gapX});
+  }
+
+  .col-3-of-4 {
+    width: calc(3 * ((100% - #{$gapX} * 3) / 4) + #{$gapX} * 2);
+  }
+}
