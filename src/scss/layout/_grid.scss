@@ -9,7 +9,7 @@
   @include clearFix();
 
   [class^='col'] {
-    background-color: $blue-primary;
+    //background-color: $blue-primary;
     float: left;
 
     &:not(:last-child) {

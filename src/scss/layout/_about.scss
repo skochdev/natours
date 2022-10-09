@@ -1,0 +1,10 @@
+.about__details {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: $margin-md;
+  padding: 0;
+
+  li + li {
+    margin-top: 3rem;
+  }
+}

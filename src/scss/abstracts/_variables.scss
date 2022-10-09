@@ -3,6 +3,7 @@
 $blue-primary: #6fd2d5;
 $blue-secondary: #5593c5;
 $white: #ffffff;
+$color-bg-muted: #f6f6f6;
 
 //Shadows-----------------------
 
@@ -10,7 +11,7 @@ $shadow-common: 0 0.5rem 0.2rem rgb(0 0 0 / 0.2);
 $shadow-common--alt: 0 0.1rem 0.2rem rgb(0 0 0 / 0.5);
 
 /*Transition and Animation related -----------------------*/
-
+$default-timing: 150ms;
 $default-cubic: 0.8, 0.8, 0.9, 0.9;
 $cubic-fast: 0.2, 0.2, 0.1, 0.2;
 $slight-shift: -0.4rem;
@@ -18,4 +19,25 @@ $slight-shift: -0.4rem;
 // Layout ----------------------------
 $max-width: 114rem;
 $gapY: 8rem;
-$gapX: 6rem;
+$gapX: 2rem;
+
+// Utility margins
+$margin-sm: 1rem;
+$margin-md: 2rem;
+$margin-l: 4rem;
+$margin-xl: 8rem;
+
+// Font-weights
+$fw-thin: 100;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-etraxbold: 900;
+
+//Font-sizes
+$fz-regular: 1.6rem;
+
+// Borders
+$br-small: 2px;

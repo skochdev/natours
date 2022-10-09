@@ -1,0 +1,38 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    position: absolute;
+    border-radius: $br-small;
+    display: block;
+    width: 55%;
+    box-shadow: $shadow-common--alt;
+    scale: 1;
+    transition: transform $default-timing cubic-bezier($default-cubic);
+    z-index: 1;
+
+    &--p1 {
+      left: 0;
+      top: 2rem;
+    }
+
+    &--p2 {
+      right: 0;
+      top: 5em;
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
