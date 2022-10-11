@@ -1,0 +1,32 @@
+.feature {
+  background-color: rgba($white, 80%);
+  font-size: $fz-regular;
+  padding: 2.5rem;
+  text-align: center;
+  min-height: 25rem;
+  border-radius: $br-small;
+  box-shadow: $shadow-common--alt;
+  transform: translate(0);
+  scale: 1;
+  transition: transform, 150ms cubic-bezier($default-cubic),
+    scale 150ms cubic-bezier($default-cubic);
+
+  &:hover {
+    transform: translateY(-1rem);
+    scale: 1.03;
+  }
+
+  &__icon {
+    &::before {
+      margin-bottom: 1rem;
+      font-size: 6rem;
+      display: inline-block;
+      background-image: $default-gradient;
+      color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__text {
+  }
+}

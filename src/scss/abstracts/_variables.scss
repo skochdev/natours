@@ -4,11 +4,15 @@ $blue-primary: #6fd2d5;
 $blue-secondary: #5593c5;
 $white: #ffffff;
 $color-bg-muted: #f6f6f6;
-
+$default-gradient: linear-gradient(
+  to top right,
+  rgba(111, 213, 189, 0.7),
+  rgba(85, 150, 197, 0.7)
+);
 //Shadows-----------------------
 
 $shadow-common: 0 0.5rem 0.2rem rgb(0 0 0 / 0.2);
-$shadow-common--alt: 0 0.1rem 0.2rem rgb(0 0 0 / 0.5);
+$shadow-common--alt: 0 0.1rem 0.4rem rgb(0 0 0 / 0.5);
 
 /*Transition and Animation related -----------------------*/
 $default-timing: 150ms;
@@ -18,8 +22,8 @@ $slight-shift: -0.4rem;
 
 // Layout ----------------------------
 $max-width: 114rem;
-$gapY: 8rem;
-$gapX: 2rem;
+$gapY: 6rem;
+$gapX: 6rem;
 
 // Utility margins
 $margin-sm: 1rem;
