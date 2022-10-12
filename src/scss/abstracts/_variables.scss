@@ -9,9 +9,27 @@ $default-gradient: linear-gradient(
   rgba(111, 213, 189, 0.7),
   rgba(85, 150, 197, 0.7)
 );
+
+$card-gradient-1: linear-gradient(
+  to bottom left,
+  rgb(255, 165, 75),
+  rgb(234, 145, 8)
+);
+
+$card-gradient-2: linear-gradient(
+  to bottom left,
+  rgba(67, 255, 114, 0.7),
+  rgba(24, 227, 34, 0.7)
+);
+
+$card-gradient-3: linear-gradient(
+  to bottom left,
+  rgba(78, 180, 239, 0.7),
+  rgba(25, 124, 220, 0.7)
+);
 //Shadows-----------------------
 
-$shadow-common: 0 0.5rem 0.2rem rgb(0 0 0 / 0.2);
+$shadow-common: 0.2 0.9rem 0.9rem rgb(0 0 0 / 0.2);
 $shadow-common--alt: 0 0.1rem 0.4rem rgb(0 0 0 / 0.5);
 
 /*Transition and Animation related -----------------------*/
@@ -24,6 +42,7 @@ $slight-shift: -0.4rem;
 $max-width: 114rem;
 $gapY: 6rem;
 $gapX: 6rem;
+$sectionPaddingY: 20rem;
 
 // Utility margins
 $margin-sm: 1rem;
@@ -45,3 +64,4 @@ $fz-regular: 1.6rem;
 
 // Borders
 $br-small: 2px;
+$br-normal: 6px;
