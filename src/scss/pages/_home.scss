@@ -1,13 +1,14 @@
 .section__about {
   background-color: $color-bg-muted;
   padding: $sectionPaddingY 0;
-  margin-top: -10rem;
+  margin-top: -11rem;
 }
 
 .section__features {
   padding: $sectionPaddingY 0;
   margin-top: -11rem;
   transform: skewY(-3deg);
+  background-blend-mode: overlay;
   @include backgroundImageGradientCover('../images/nat-4.jpg');
 
   & > * {
