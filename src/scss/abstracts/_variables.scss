@@ -33,6 +33,7 @@ $card-gradient-3: linear-gradient(
 
 $shadow-common: 0.2 0.9rem 0.9rem rgb(0 0 0 / 0.2);
 $shadow-common--alt: 0 0.1rem 0.4rem rgb(0 0 0 / 0.5);
+$shadow-common--blurred: 0 2rem 4rem rgb(0 0 0 / 0.2);
 
 /*Transition and Animation related -----------------------*/
 $default-timing: 150ms;
@@ -51,6 +52,12 @@ $margin-sm: 1rem;
 $margin-md: 2rem;
 $margin-l: 4rem;
 $margin-xl: 8rem;
+
+// Utility paddings
+$padding-sm: 1rem;
+$padding-md: 2rem;
+$padding-l: 4rem;
+$padding-xl: 8rem;
 
 // Font-weights
 $fw-thin: 100;

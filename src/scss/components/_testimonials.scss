@@ -1,0 +1,28 @@
+.testimonial {
+  width: 75%;
+  margin: 0 auto;
+  border-radius: $br-small;
+  box-shadow: $shadow-common--blurred;
+  padding: $padding-l $padding-l $padding-l 6rem;
+  font-size: $fz-regular;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__image-wrapper {
+    height: 15rem;
+    width: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    translate: -2rem;
+  }
+
+  &__image {
+    height: 100%;
+    translate: -3rem;
+  }
+}
