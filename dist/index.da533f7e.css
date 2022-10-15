@@ -286,10 +286,12 @@ ul {
 .section__tours {
   background-color: #f6f6f6;
   margin-top: -11rem;
+  padding-bottom: 8rem;
 }
 
 .section__testimonials {
-  padding: 15rem 0;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .btn {
@@ -408,7 +410,7 @@ ul {
 }
 
 .tours__card {
-  perspective: 1500rem;
+  perspective: 150rem;
 }
 
 .tours__card-side {
@@ -416,7 +418,7 @@ ul {
   width: 100%;
   backface-visibility: hidden;
   border-radius: 6px;
-  transition: transform .3s cubic-bezier(.8, .8, .9, .9);
+  transition: transform .15s cubic-bezier(.8, .8, .9, .9);
   position: relative;
   top: 0;
   left: 0;
@@ -425,6 +427,7 @@ ul {
 }
 
 .tours__card-side--front {
+  backface-visibility: hidden;
   position: absolute;
 }
 
@@ -533,33 +536,68 @@ ul {
   display: block;
 }
 
-.testimonial {
+.testimonials {
   width: 75%;
-  border-radius: 2px;
   margin: 0 auto;
+}
+
+.testimonials__item {
+  border-radius: 2px;
   padding: 4rem 4rem 4rem 6rem;
   font-size: 1.6rem;
   transform: skewX(-12deg);
   box-shadow: 0 2rem 4rem #0003;
 }
 
-.testimonial > * {
+.testimonials__item + .testimonials__item {
+  margin-top: 8rem;
+}
+
+.testimonials__item > * {
   transform: skewX(12deg);
 }
 
-.testimonial__image-wrapper {
+.testimonials__item:hover .testimonials__image-caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.testimonials__item:hover .testimonials__image {
+  filter: blur(.1rem) brightness(.7);
+  transform: scale(1);
+}
+
+.testimonials__image-caption {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  border-radius: 2px;
+  font-size: 1.6rem;
+  transition: transform .25s cubic-bezier(.2, .2, .1, .2), opacity .25s cubic-bezier(.2, .2, .1, .2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.testimonials__image-wrapper {
   height: 15rem;
   width: 15rem;
   float: left;
   shape-outside: circle(50% at 50% 50%);
   -webkit-shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50%);
+  position: relative;
   translate: -2rem;
 }
 
-.testimonial__image {
+.testimonials__image {
   height: 100%;
-  translate: -3rem;
+  transition: transform .25s cubic-bezier(.2, .2, .1, .2), filter .25s cubic-bezier(.2, .2, .1, .2);
+  position: absolute;
+  left: -25%;
+  transform: scale(1.4);
 }
 
 .row {

@@ -20,9 +20,11 @@
 
 .section__tours {
   margin-top: -11rem;
+  padding-bottom: $padding-xl;
   background-color: $color-bg-muted;
 }
 
 .section__testimonials {
-  padding: 15rem 0;
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
 }

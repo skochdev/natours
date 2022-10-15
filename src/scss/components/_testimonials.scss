@@ -1,17 +1,50 @@
-.testimonial {
+.testimonials {
   width: 75%;
   margin: 0 auto;
-  border-radius: $br-small;
-  box-shadow: $shadow-common--blurred;
-  padding: $padding-l $padding-l $padding-l 6rem;
-  font-size: $fz-regular;
-  transform: skewX(-12deg);
 
-  & > * {
-    transform: skewX(12deg);
+  &__item {
+    border-radius: $br-small;
+    box-shadow: $shadow-common--blurred;
+    padding: $padding-l $padding-l $padding-l 6rem;
+    font-size: $fz-regular;
+    transform: skewX(-12deg);
+
+    & + & {
+      margin-top: $margin-xl;
+    }
+
+    & > * {
+      transform: skewX(12deg);
+    }
+  }
+
+  &__item:hover &__image-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &__item:hover &__image {
+    transform: scale(1);
+    filter: blur(0.1rem) brightness(0.7);
+  }
+
+  &__image-caption {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: $br-small;
+    opacity: 0;
+    transform: translate(-50%, 0%);
+    transition: transform 250ms cubic-bezier($cubic-fast),
+      opacity 250ms cubic-bezier($cubic-fast);
   }
 
   &__image-wrapper {
+    position: relative;
     height: 15rem;
     width: 15rem;
     float: left;
@@ -23,6 +56,10 @@
 
   &__image {
     height: 100%;
-    translate: -3rem;
+    position: absolute;
+    transition: transform 250ms cubic-bezier($cubic-fast),
+      filter 250ms cubic-bezier($cubic-fast);
+    transform: scale(1.4);
+    left: -25%;
   }
 }

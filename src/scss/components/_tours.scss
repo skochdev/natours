@@ -1,5 +1,5 @@
 .tours__card {
-  perspective: 1500rem;
+  perspective: 150rem;
 
   &-side {
     position: relative;
@@ -9,12 +9,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    transition: transform 300ms cubic-bezier($default-cubic);
+    transition: transform 150ms cubic-bezier($default-cubic);
     backface-visibility: hidden;
     box-shadow: $shadow-common;
 
     &--front {
       position: absolute;
+      backface-visibility: hidden;
     }
 
     &--back {
