@@ -295,6 +295,12 @@ ul {
   position: relative;
 }
 
+.section__booking {
+  background-image: linear-gradient(to top right, #6fd5bdb3, #5596c5b3);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .btn {
   text-transform: uppercase;
   color: inherit;
@@ -625,6 +631,79 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.booking {
+  height: 50rem;
+  background-image: linear-gradient(105deg, #fffc 0% 49.5%, #0000 50%), url("nat-10.35e99c6b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  padding: 4rem;
+  box-shadow: .2px .9rem .9rem #0003;
+}
+
+.booking__form {
+  width: 40%;
+  color: #222;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+.booking__form label {
+  flex-flow: column;
+  display: flex;
+  position: relative;
+}
+
+.booking__form label:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.booking__form--input-wrapper {
+  position: relative;
+}
+
+.booking__form--input-wrapper + .booking__form--input-wrapper {
+  margin-top: 4rem;
+}
+
+.booking__form-input {
+  color: inherit;
+  background-color: #ffffffb3;
+  border-bottom: 2px solid #0000;
+  border-radius: 6px;
+  padding: 1rem 2rem;
+}
+
+.booking__form-input::placeholder {
+  color: tomato;
+}
+
+.booking__form-input:focus + .booking__form-label-text, .booking__form-input:not(:placeholder-shown) + .booking__form-label-text {
+  color: #222;
+  transform: translate(1rem, -5rem);
+}
+
+.booking__form-input:focus {
+  border-bottom: 2px solid #6fd2d5;
+  outline: none;
+  box-shadow: .2px .9rem .9rem #0003;
+}
+
+.booking__form-input:focus:invalid {
+  border-bottom: 2px solid #fd9b30;
+  outline: none;
+  box-shadow: .2px .9rem .9rem #0003;
+}
+
+.booking__form-label-text {
+  color: #adadad;
+  transition: transform .15s cubic-bezier(.8, .8, .9, .9), color .15s cubic-bezier(.8, .8, .9, .9);
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translate(1rem, -50%);
 }
 
 .row {

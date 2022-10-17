@@ -1,0 +1,86 @@
+.booking {
+  padding: $padding-l;
+  height: 50rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba($white, 0.8) 0%,
+      rgba($white, 0.8) 49.5%,
+      transparent 50%
+    ),
+    url('../images/nat-10.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: $br-small;
+  box-shadow: $shadow-common;
+
+  &__form {
+    width: 40%;
+    font-family: inherit;
+    font-size: $fz-regular;
+    color: $color-text;
+
+    & label {
+      position: relative;
+      display: flex;
+      flex-flow: column nowrap;
+
+      &:not(:last-child) {
+        margin-bottom: $margin-md;
+      }
+    }
+  }
+
+  &__form--input-wrapper {
+    position: relative;
+
+    & + & {
+      margin-top: $margin-l;
+    }
+  }
+
+  &__form-input {
+    padding: $padding-sm $padding-md;
+    border-radius: $br-normal;
+    background-color: rgba($white, 0.7);
+    border-bottom: 2px solid transparent;
+    color: inherit;
+
+    &::placeholder {
+      color: tomato;
+    }
+
+    &:focus + .booking__form-label-text,
+    &:not(:placeholder-shown) + .booking__form-label-text {
+      transform: translate(1rem, -5rem);
+      color: $color-text;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $color-primary;
+      box-shadow: $shadow-common;
+    }
+
+    &:focus:invalid {
+      outline: none;
+      border-bottom: 2px solid $color-placeholder-invalid;
+      box-shadow: $shadow-common;
+    }
+  }
+
+  &__form-label-text {
+    position: absolute;
+    color: $color-text-placeholder;
+    top: 50%;
+    left: 1rem;
+    transform: translate(1rem, -50%);
+    transition: transform 150ms cubic-bezier($default-cubic),
+      color 150ms cubic-bezier($default-cubic);
+  }
+
+  &__form--name {
+  }
+
+  &__form--email {
+  }
+}

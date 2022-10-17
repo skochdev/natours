@@ -32,15 +32,15 @@
   padding: 1rem 2rem;
   font-size: $fz-regular;
   text-decoration: none;
-  color: $blue-primary;
-  border-bottom: 2px solid $blue-primary;
+  color: $color-primary;
+  border-bottom: 2px solid $color-primary;
   background-color: $white;
   transition: background-color 150ms cubic-bezier($default-cubic),
     color 150ms cubic-bezier($default-cubic);
 
   &:hover,
   &:focus {
-    background-color: $blue-primary;
+    background-color: $color-primary;
     color: white;
   }
 }
