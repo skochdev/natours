@@ -5,7 +5,7 @@
   font-size: $fz-regular;
   text-align: center;
   background-color: $white;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2rem;
   border-radius: 100vw;
   transition: transform 150ms cubic-bezier($cubic-fast),
     box-shadow 50ms cubic-bezier($cubic-fast),
@@ -54,4 +54,9 @@
 
 .btn__tours--all {
   display: inline-block;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-common--alt;
+  }
 }

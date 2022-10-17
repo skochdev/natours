@@ -3,6 +3,7 @@
   margin: 0 auto;
 
   &__item {
+    background-color: $white;
     border-radius: $br-small;
     box-shadow: $shadow-common--blurred;
     padding: $padding-l $padding-l $padding-l 6rem;
@@ -16,6 +17,10 @@
     & > * {
       transform: skewX(12deg);
     }
+  }
+
+  &__text {
+    color: $color-text;
   }
 
   &__item:hover &__image-caption {
