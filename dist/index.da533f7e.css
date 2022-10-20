@@ -133,10 +133,27 @@ summary {
   margin-bottom: 2rem;
 }
 
+.u__mgt-sm {
+  margin-top: 2rem;
+}
+
+.u__mgt-md {
+  margin-top: 4rem;
+}
+
+.u__mgt-lg {
+  margin-top: 8rem;
+}
+
 *, :after, :before {
   box-sizing: inherit;
   border: 0;
   margin: 0;
+}
+
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 html {
@@ -301,7 +318,9 @@ ul {
   padding-bottom: 8rem;
 }
 
-.btn {
+.btn, .btn:link, .btn:visited {
+  cursor: pointer;
+  min-width: 15rem;
   text-transform: uppercase;
   color: inherit;
   text-align: center;
@@ -312,6 +331,10 @@ ul {
   text-decoration: none;
   transition: transform .15s cubic-bezier(.2, .2, .1, .2), box-shadow 50ms cubic-bezier(.2, .2, .1, .2), color .15s cubic-bezier(.2, .2, .1, .2), background-color .15s cubic-bezier(.2, .2, .1, .2);
   box-shadow: .2px .9rem .9rem #0003;
+}
+
+.btn:hover, .btn:focus, .btn:link:hover, .btn:link:focus, .btn:visited:hover, .btn:visited:focus {
+  box-shadow: 0 .1rem .4rem #00000080;
 }
 
 .btn__hero {
@@ -635,11 +658,12 @@ ul {
 
 .booking {
   height: 50rem;
-  background-image: linear-gradient(105deg, #fffc 0% 49.5%, #0000 50%), url("nat-10.35e99c6b.jpg");
+  background-image: linear-gradient(105deg, #fffc 0% 55.2%, #0000 55.5%), url("nat-10.35e99c6b.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 2px;
   padding: 4rem;
+  position: relative;
   box-shadow: .2px .9rem .9rem #0003;
 }
 
@@ -648,15 +672,18 @@ ul {
   color: #222;
   font-family: inherit;
   font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
-.booking__form label {
+.booking__form--label {
   flex-flow: column;
   display: flex;
   position: relative;
 }
 
-.booking__form label:not(:last-child) {
+.booking__form--label:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -671,7 +698,7 @@ ul {
 .booking__form-input {
   color: inherit;
   background-color: #ffffffb3;
-  border-bottom: 2px solid #0000;
+  border: 2px solid #5593c5;
   border-radius: 6px;
   padding: 1rem 2rem;
 }
@@ -686,13 +713,13 @@ ul {
 }
 
 .booking__form-input:focus {
-  border-bottom: 2px solid #6fd2d5;
+  border: 2px solid #6fd2d5;
   outline: none;
   box-shadow: .2px .9rem .9rem #0003;
 }
 
 .booking__form-input:focus:invalid {
-  border-bottom: 2px solid #fd9b30;
+  border: 2px solid #fd9b30;
   outline: none;
   box-shadow: .2px .9rem .9rem #0003;
 }
@@ -704,6 +731,63 @@ ul {
   top: 50%;
   left: 1rem;
   transform: translate(1rem, -50%);
+}
+
+.booking__form-radio-group {
+  justify-content: center;
+  display: flex;
+}
+
+.booking__form-radio {
+  margin-top: 2rem;
+}
+
+.booking__form-radio-input {
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.booking__form-radio-input:checked + .booking__form-radio-label > .booking__form-radio-button:after {
+  opacity: 1;
+}
+
+.booking__form-radio-label {
+  cursor: pointer;
+  color: #222;
+  margin-left: 5rem;
+  position: relative;
+}
+
+.booking__form-radio-button {
+  height: 2rem;
+  width: 2rem;
+  border: 2px solid #5593c5;
+  border-radius: 50%;
+  position: absolute;
+  top: .1rem;
+  left: -3rem;
+}
+
+.booking__form-radio-button:after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  opacity: 0;
+  background-color: #5593c5;
+  border-radius: 50%;
+  transition: opacity .1s ease-in;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .row {
@@ -782,6 +866,52 @@ ul {
 
 .about__details li + li {
   margin-top: 3rem;
+}
+
+.footer {
+  background-color: #424242;
+  padding: 4rem 0;
+  font-size: 1.4rem;
+}
+
+.footer__footer-logo {
+  width: 15rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer__categories-list {
+  display: flex;
+}
+
+.footer__categories-item {
+  cursor: pointer;
+  color: #8f8f8f;
+  padding: 1rem;
+  transition: color .15s ease-in;
+}
+
+.footer__categories-item:hover, .footer__categories-item:focus {
+  color: #fff;
+}
+
+.footer__categories-item + .footer__categories-item {
+  margin-left: 1rem;
+}
+
+.footer__copyright {
+  text-align: right;
+  padding: 1rem;
+}
+
+.footer__copyright-link {
+  color: #8f8f8f;
+  font-weight: 700;
+  transition: color .15s ease-in;
+}
+
+.footer__copyright-link:hover, .footer__copyright-link:focus {
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.da533f7e.css.map */

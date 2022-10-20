@@ -1,11 +1,12 @@
 .booking {
+  position: relative;
   padding: $padding-l;
   height: 50rem;
   background-image: linear-gradient(
       105deg,
       rgba($white, 0.8) 0%,
-      rgba($white, 0.8) 49.5%,
-      transparent 50%
+      rgba($white, 0.8) 55.2%,
+      transparent 55.5%
     ),
     url('../images/nat-10.jpg');
   background-size: cover;
@@ -14,12 +15,15 @@
   box-shadow: $shadow-common;
 
   &__form {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
     width: 40%;
     font-family: inherit;
     font-size: $fz-regular;
     color: $color-text;
 
-    & label {
+    &--label {
       position: relative;
       display: flex;
       flex-flow: column nowrap;
@@ -42,7 +46,7 @@
     padding: $padding-sm $padding-md;
     border-radius: $br-normal;
     background-color: rgba($white, 0.7);
-    border-bottom: 2px solid transparent;
+    border: 2px solid $color-secondary;
     color: inherit;
 
     &::placeholder {
@@ -57,13 +61,13 @@
 
     &:focus {
       outline: none;
-      border-bottom: 2px solid $color-primary;
+      border: 2px solid $color-primary;
       box-shadow: $shadow-common;
     }
 
     &:focus:invalid {
       outline: none;
-      border-bottom: 2px solid $color-placeholder-invalid;
+      border: 2px solid $color-placeholder-invalid;
       box-shadow: $shadow-common;
     }
   }
@@ -77,10 +81,55 @@
     transition: transform 150ms cubic-bezier($default-cubic),
       color 150ms cubic-bezier($default-cubic);
   }
+}
 
-  &__form--name {
+.booking__form-radio-group {
+  display: flex;
+  justify-content: center;
+}
+
+.booking__form-radio {
+  margin-top: $margin-md;
+
+  &-input {
+    @include visuallyHidden;
   }
 
-  &__form--email {
+  // responsible for central dot of the radio button
+  &-input:checked
+    + .booking__form-radio-label
+    > .booking__form-radio-button::after {
+    opacity: 1;
+  }
+
+  &-label {
+    position: relative;
+    cursor: pointer;
+    color: $color-text;
+    margin-left: 5rem;
+  }
+
+  &-button {
+    position: absolute;
+    top: 0.1rem;
+    left: -3rem;
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid $color-secondary;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      height: 1rem;
+      width: 1rem;
+      background-color: $color-secondary;
+      opacity: 0;
+      transition: opacity 100ms ease-in;
+    }
   }
 }

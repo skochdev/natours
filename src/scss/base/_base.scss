@@ -6,6 +6,14 @@
   box-sizing: inherit;
 }
 
+a {
+  &,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 html {
   /*10px default font-size. % is used so the user would be able to zoom-in/out*/
   font-size: 62.5%;

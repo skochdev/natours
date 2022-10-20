@@ -240,25 +240,83 @@
       <section class="section section__booking">
   <div class="row">
     <div class="booking">
-      <h2 class="heading__secondary u__heading-mgb-sm">Book your shit now!</h2>
+      <h2 class="heading__secondary u__heading-mgb-sm">Book your tour now!</h2>
 
       <form class="booking__form">
         <div class="booking__form--input-wrapper">
-          <label class="booking__form--name">
+          <label class="booking__form--label">
             <input class="booking__form-input" type="text" placeholder=" " required="">
             <span class="booking__form-label-text">Full Name</span>
           </label>
         </div>
         <div class="booking__form--input-wrapper">
-          <label class="booking__form--email">
+          <label class="booking__form--label">
             <input class="booking__form-input" type="email" placeholder=" " required="">
             <span class="booking__form-label-text">Email</span>
           </label>
+        </div>
+        <div class="booking__form-radio-group">
+          <div class="booking__form-radio">
+            <input class="booking__form-radio-input" id="individual" type="radio" name="tour-type" required="" checked="">
+            <label for="individual" class="booking__form-radio-label">
+              <span class="booking__form-radio-button"></span>Individual
+            </label>
+          </div>
+          <div class="booking__form-radio">
+            <input class="booking__form-radio-input" id="group" type="radio" name="tour-type">
+            <label class="booking__form-radio-label" for="group">
+              <span class="booking__form-radio-button"></span>Group
+            </label>
+          </div>
+        </div>
+        <div class="u__text-center">
+          <button class="btn btn__booking u__mgt-md" type="submit">
+            Send
+          </button>
         </div>
       </form>
     </div>
   </div>
 </section>
+
+      <footer class="footer">
+  <div class="footer__logo-wrapper">
+    <img class="footer__footer-logo" src="/logo-green-2x.89325010.png" alt="Logo">
+  </div>
+  <div class="row">
+    <div class="col-1-of-2">
+      <div class="footer__categories">
+        <ul class="footer__categories-list">
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">Company</a>
+          </li>
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">Contact Us</a>
+          </li>
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">Privacy</a>
+          </li>
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">Terms of Service</a>
+          </li>
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">Company</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-1-of-2">
+      <div class="footer__copyright">
+        <p>
+          Built by
+          <a class="footer__copyright-link" href="https://www.linkedin.com/in/bohdan-skochii/">Bohdan Skochii</a>
+          for practice, based on Udemy course by
+          <a class="footer__copyright-link" href="https://www.udemy.com/course/advanced-css-and-sass">Jonas Schmedtmann</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
     </main>
   <script src="/natours.59712999.js"></script></body>

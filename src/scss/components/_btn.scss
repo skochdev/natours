@@ -1,17 +1,28 @@
 .btn {
-  text-transform: uppercase;
-  color: inherit;
-  text-decoration: none;
-  font-size: $fz-regular;
-  text-align: center;
-  background-color: $white;
-  padding: 1.5rem 2rem;
-  border-radius: 100vw;
-  transition: transform 150ms cubic-bezier($cubic-fast),
-    box-shadow 50ms cubic-bezier($cubic-fast),
-    color 150ms cubic-bezier($cubic-fast),
-    background-color 150ms cubic-bezier($cubic-fast);
-  box-shadow: $shadow-common;
+  &,
+  &:link,
+  &:visited {
+    cursor: pointer;
+    min-width: 15rem;
+    text-transform: uppercase;
+    color: inherit;
+    text-decoration: none;
+    font-size: $fz-regular;
+    text-align: center;
+    background-color: $white;
+    padding: 1.5rem 2rem;
+    border-radius: 100vw;
+    transition: transform 150ms cubic-bezier($cubic-fast),
+      box-shadow 50ms cubic-bezier($cubic-fast),
+      color 150ms cubic-bezier($cubic-fast),
+      background-color 150ms cubic-bezier($cubic-fast);
+    box-shadow: $shadow-common;
+
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-common--alt;
+    }
+  }
 
   &__hero {
     display: inline-block;
@@ -59,4 +70,7 @@
   &:focus {
     box-shadow: $shadow-common--alt;
   }
+}
+
+.btn__booking {
 }
