@@ -1,0 +1,81 @@
+.alt-navigation {
+  position: relative;
+  &__button {
+    width: 6rem;
+    height: 6rem;
+    background-color: $white;
+    position: fixed;
+    right: 5rem;
+    top: 5rem;
+    border-radius: 50%;
+    z-index: 4;
+  }
+
+  &__checkbox {
+    @include visuallyHidden;
+  }
+
+  &__backdrop {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    right: 5rem;
+    top: 5rem;
+    z-index: 2;
+    transform: scale(100);
+    background-image: radial-gradient($color-primary, $color-secondary);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  &__nav-list {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__nav-item {
+    text-align: left;
+    color: $white;
+
+    & + & {
+      margin-top: $margin-md;
+    }
+  }
+
+  &__nav-link {
+    &:link,
+    &:visited {
+      display: block;
+      padding: 1rem 3rem;
+      font-size: 3rem;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $white 50%
+      );
+      transform: translateX(0);
+      background-size: 220%;
+      transition: background-position 150ms ease-in-out, color 150ms ease-in-out,
+        transform 150ms ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+      background-position: 100%;
+      transform: translateX(5rem);
+    }
+  }
+}
