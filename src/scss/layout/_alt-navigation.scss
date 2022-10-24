@@ -1,6 +1,7 @@
 .alt-navigation {
   position: relative;
   &__button {
+    cursor: pointer;
     width: 6rem;
     height: 6rem;
     background-color: $white;
@@ -9,6 +10,7 @@
     top: 5rem;
     border-radius: 50%;
     z-index: 4;
+    box-shadow: $shadow-common;
   }
 
   &__checkbox {
@@ -23,7 +25,8 @@
     right: 5rem;
     top: 5rem;
     z-index: 2;
-    transform: scale(100);
+    transform: scale(0);
+    transition: transform 150ms cubic-bezier($cubic-fast);
     background-image: radial-gradient($color-primary, $color-secondary);
   }
 
@@ -34,6 +37,9 @@
     top: 0;
     right: 0;
     z-index: 3;
+    opacity: 0;
+    transition: opacity $default-timing cubic-bezier($cubic-fast);
+    pointer-events: none;
   }
 
   &__nav-list {
@@ -78,4 +84,19 @@
       transform: translateX(5rem);
     }
   }
+
+  &__button ~ &__checkbox:checked &__backdrop {
+    transform: scale(100);
+  }
+
+  // Toggles backdrop and navigation on and off ->
+  &__checkbox:checked ~ &__backdrop {
+    transform: scale(100);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    pointer-events: all;
+  }
+  // Toggles backdrop and navigation on and off  <-
 }
