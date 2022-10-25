@@ -1,14 +1,18 @@
 <div class="alt-navigation">
-  <label
-    for="alt-navigation__checkbox"
-    class="alt-navigation__button">
-  </label>
   <input
     id="alt-navigation__checkbox"
-    role="menuitemcheckbox"
+    role="menuitem"
+    aria-label="mobile menu button"
     type="checkbox"
     class="input alt-navigation__checkbox" />
-  <div class="alt-navigation__backdrop">&nbsp;</div>
+  <label
+    tabindex="0"
+    for="alt-navigation__checkbox"
+    class="alt-navigation__button">
+    <span class="alt-navigation__icon"></span>
+  </label>
+
+  <div class="alt-navigation__backdrop"></div>
   <nav class="alt-navigation__nav">
     <ul class="alt-navigation__nav-list">
       <li class="alt-navigation__nav-item">

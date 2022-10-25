@@ -14,10 +14,12 @@
 
   <body>
     <div class="alt-navigation">
-  <label for="alt-navigation__checkbox" class="alt-navigation__button">
+  <input id="alt-navigation__checkbox" role="menuitem" aria-label="mobile menu button" type="checkbox" class="input alt-navigation__checkbox">
+  <label tabindex="0" for="alt-navigation__checkbox" class="alt-navigation__button">
+    <span class="alt-navigation__icon"></span>
   </label>
-  <input id="alt-navigation__checkbox" role="menuitemcheckbox" type="checkbox" class="input alt-navigation__checkbox">
-  <div class="alt-navigation__backdrop">&nbsp;</div>
+
+  <div class="alt-navigation__backdrop"></div>
   <nav class="alt-navigation__nav">
     <ul class="alt-navigation__nav-list">
       <li class="alt-navigation__nav-item">

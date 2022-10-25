@@ -1,9 +1,10 @@
 .alt-navigation {
   position: relative;
+
   &__button {
     cursor: pointer;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     background-color: $white;
     position: fixed;
     right: 5rem;
@@ -99,4 +100,58 @@
     pointer-events: all;
   }
   // Toggles backdrop and navigation on and off  <-
+
+  // Burger icon
+  &__icon {
+    position: relative;
+    top: 25px;
+    background-color: $color-text;
+    transition: background-color 150ms ease-in-out;
+
+    &,
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 3px;
+      background-color: $color-text;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &::before,
+    &::after {
+      transform-origin: center;
+      content: '';
+      transition: top 150ms ease-in-out, transform 150ms ease-in-out;
+      position: absolute;
+    }
+
+    &::before {
+      top: 7px;
+    }
+
+    &::after {
+      top: -7px;
+    }
+  }
+
+  &__button:hover &__icon:before {
+    top: 9px;
+  }
+  &__button:hover &__icon:after {
+    top: -9px;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
 }
